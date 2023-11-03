@@ -1,0 +1,2 @@
+[workspace]
+members = ["simple_web_macros", "simple_web_framework", "web_app"]

@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'p3_strong_reference_count_and_weak_reference_count'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=p3_strong_reference_count_and_weak_reference_count",
+                    "--package=p3_strong_reference_count_and_weak_reference_count"
+                ],
+                "filter": {
+                    "name": "p3_strong_reference_count_and_weak_reference_count",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'p3_strong_reference_count_and_weak_reference_count'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=p3_strong_reference_count_and_weak_reference_count",
+                    "--package=p3_strong_reference_count_and_weak_reference_count"
+                ],
+                "filter": {
+                    "name": "p3_strong_reference_count_and_weak_reference_count",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
