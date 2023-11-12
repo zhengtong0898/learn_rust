@@ -1,0 +1,12 @@
+[package]
+name = "o3_tokio_tracing_multilog"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tracing = "0.1"
+tracing-subscriber = "0.2"
+tracing-appender = "0.1"
+regex = { version = "1.0", features = ["unicode-case"] }
