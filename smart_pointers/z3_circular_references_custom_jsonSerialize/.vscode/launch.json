@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'z3_circular_references_custom_jsonSerialize'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=z3_circular_references_custom_jsonSerialize",
+                    "--package=z3_circular_references_custom_jsonSerialize"
+                ],
+                "filter": {
+                    "name": "z3_circular_references_custom_jsonSerialize",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'z3_circular_references_custom_jsonSerialize'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=z3_circular_references_custom_jsonSerialize",
+                    "--package=z3_circular_references_custom_jsonSerialize"
+                ],
+                "filter": {
+                    "name": "z3_circular_references_custom_jsonSerialize",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
