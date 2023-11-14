@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'z2_circular_references_custom_fmtdebug'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=z2_circular_references_custom_fmtdebug",
+                    "--package=z2_circular_references_custom_fmtdebug"
+                ],
+                "filter": {
+                    "name": "z2_circular_references_custom_fmtdebug",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'z2_circular_references_custom_fmtdebug'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=z2_circular_references_custom_fmtdebug",
+                    "--package=z2_circular_references_custom_fmtdebug"
+                ],
+                "filter": {
+                    "name": "z2_circular_references_custom_fmtdebug",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
