@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'o2_watch_file_changed_with_future'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=o2_watch_file_changed_with_future",
+                    "--package=o2_watch_file_changed_with_future"
+                ],
+                "filter": {
+                    "name": "o2_watch_file_changed_with_future",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'o2_watch_file_changed_with_future'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=o2_watch_file_changed_with_future",
+                    "--package=o2_watch_file_changed_with_future"
+                ],
+                "filter": {
+                    "name": "o2_watch_file_changed_with_future",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
