@@ -8,7 +8,8 @@ async fn main() -> anyhow::Result<()> {
     // 启动一个新的异步task来运行这个代码, 确保不堵塞当前的异步任务.
     tokio::spawn(async {
         watch().await.unwrap();
-    });
+    })
+    .await?;
 
     Ok(())
 }
