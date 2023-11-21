@@ -1,0 +1,15 @@
+[package]
+name = "o1_example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+h2 = "0.3.22"
+http = "0.2"
+tokio = { version = "1.34.0", features = ["full"] }
+futures = "0.3.29"
+tokio-rustls = "0.24"
+webpki-roots = "0.25"
+bytes = "1"
