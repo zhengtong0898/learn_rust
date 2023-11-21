@@ -35,7 +35,7 @@ fn build_tls_connector(is_http2: bool) -> Result<TlsConnector, Box<dyn Error>> {
     Ok(TlsConnector::from(Arc::new(config)))
 }
 
-async fn build_tls_client(
+async fn build_h2_client(
     uri_str: &str,
     is_http2: bool,
 ) -> Result<client::SendRequest<bytes::Bytes>, Box<dyn Error>> {
@@ -106,7 +106,7 @@ pub async fn main() -> Result<(), Box<dyn Error>> {
         .unwrap();
 
     // sending request
-    let mut client = build_tls_client(uri, true).await.unwrap();
+    let mut client = build_h2_client(uri, true).await.unwrap();
     let (response, _) = client.send_request(request, true).unwrap();
 
     // waiting on response
