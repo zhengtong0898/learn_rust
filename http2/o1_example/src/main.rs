@@ -2,6 +2,7 @@ use bytes;
 use h2::client;
 use http::{Method, Request, Uri};
 use std::sync::Arc;
+use std::time::Duration;
 use tokio::net::TcpStream;
 use tokio_rustls::rustls::{ClientConfig, OwnedTrustAnchor, RootCertStore, ServerName};
 use tokio_rustls::TlsConnector;
@@ -65,6 +66,7 @@ async fn build_tls_client(
     println!("Starting client handshake");
     let (client, h2) = client::handshake(tls_stream).await?;
 
+    // new a async task to catch h2_stream status
     tokio::spawn(async move {
         if let Err(e) = h2.await {
             println!("GOT ERR={:?}", e);
@@ -115,6 +117,10 @@ pub async fn main() -> Result<(), Box<dyn Error>> {
     println!("resp: {:?}", resp.headers);
     while let Some(chunk) = body.data().await {
         println!("RX: {:?}", chunk?);
+    }
+
+    for _ in 1..10 {
+        std::thread::sleep(Duration::from_secs(1));
     }
 
     Ok(())
