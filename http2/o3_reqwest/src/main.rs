@@ -3,7 +3,7 @@ use tokio;
 
 #[tokio::main]
 async fn main() -> Result<(), reqwest::Error> {
-    let client = Client::builder().http2_prior_knowledge().build()?;
+    let client = Client::new();
     let response = client.get("https://www.douyin.com").send().await?;
 
     match response.version() {
