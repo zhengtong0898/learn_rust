@@ -7,15 +7,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug executable 'o1_example'",
+            "name": "Debug executable 'o1_h2'",
             "cargo": {
                 "args": [
                     "build",
-                    "--bin=o1_example",
-                    "--package=o1_example"
+                    "--bin=o1_h2",
+                    "--package=o1_h2"
                 ],
                 "filter": {
-                    "name": "o1_example",
+                    "name": "o1_h2",
                     "kind": "bin"
                 }
             },
@@ -28,16 +28,16 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in executable 'o1_example'",
+            "name": "Debug unit tests in executable 'o1_h2'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
-                    "--bin=o1_example",
-                    "--package=o1_example"
+                    "--bin=o1_h2",
+                    "--package=o1_h2"
                 ],
                 "filter": {
-                    "name": "o1_example",
+                    "name": "o1_h2",
                     "kind": "bin"
                 }
             },
