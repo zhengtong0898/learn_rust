@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'r1_tokio_trait_castdown'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=r1_tokio_trait_castdown",
+                    "--package=r1_tokio_trait_castdown"
+                ],
+                "filter": {
+                    "name": "r1_tokio_trait_castdown",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'r1_tokio_trait_castdown'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=r1_tokio_trait_castdown",
+                    "--package=r1_tokio_trait_castdown"
+                ],
+                "filter": {
+                    "name": "r1_tokio_trait_castdown",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
